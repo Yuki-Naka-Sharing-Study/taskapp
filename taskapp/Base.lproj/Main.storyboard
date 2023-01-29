@@ -169,8 +169,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="14m-tw-g9t"/>
                     <connections>
-                        <outlet property="categoryLabel" destination="2vz-Sk-a0Z" id="2A6-8C-HRu"/>
-                        <outlet property="categoryTextField" destination="pE5-qi-R8g" id="lkn-wq-tCg"/>
+                        <outlet property="categoryLabel" destination="2vz-Sk-a0Z" id="9GX-nt-agA"/>
+                        <outlet property="categoryTextField" destination="pE5-qi-R8g" id="zaM-Hx-KEc"/>
                         <outlet property="contentsTextView" destination="dbg-1e-9AV" id="305-yE-dAb"/>
                         <outlet property="datePicker" destination="xRx-PZ-cZv" id="zwi-up-yFr"/>
                         <outlet property="titleTextField" destination="vh2-VV-z1p" id="0S8-k1-w8C"/>
