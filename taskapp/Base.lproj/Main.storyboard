@@ -20,9 +20,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HLE-KG-dt2">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="DEB-fF-kNR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="Hkh-xc-rHI"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="kgg-5E-YlW" detailTextLabel="FcL-FR-pCI" style="IBUITableViewCellStyleSubtitle" id="s8A-eZ-TB6">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="94" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s8A-eZ-TB6" id="W29-KO-qcS">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
@@ -65,11 +73,29 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchDisplayController" destination="eLb-Jf-3Tv" id="EC8-4W-WcJ"/>
                         <outlet property="tableView" destination="HLE-KG-dt2" id="OjQ-eB-Y9W"/>
                         <segue destination="MuB-MO-GR3" kind="show" identifier="cellSegue" id="RGj-Pt-7VF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="C08-ZH-ANp">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="fGY-32-yaT"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="z4h-RZ-3lT"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="eqS-Go-1qK"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="SWy-MG-0zd"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="eLb-Jf-3Tv">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="cRF-k4-fiK"/>
+                        <outlet property="searchBar" destination="DEB-fF-kNR" id="Uhy-G1-eS6"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="dw8-1J-126"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="2aw-D6-PFJ"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="4pw-cL-FZG"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
         </scene>
@@ -173,12 +199,21 @@
                         <outlet property="categoryTextField" destination="pE5-qi-R8g" id="zaM-Hx-KEc"/>
                         <outlet property="contentsTextView" destination="dbg-1e-9AV" id="305-yE-dAb"/>
                         <outlet property="datePicker" destination="xRx-PZ-cZv" id="zwi-up-yFr"/>
+                        <outlet property="searchDisplayController" destination="Ezt-S5-dW1" id="u6q-bw-5ux"/>
                         <outlet property="titleTextField" destination="vh2-VV-z1p" id="0S8-k1-w8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c51-GP-426" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Ezt-S5-dW1">
+                    <connections>
+                        <outlet property="delegate" destination="MuB-MO-GR3" id="Sqn-0T-tJx"/>
+                        <outlet property="searchContentsController" destination="MuB-MO-GR3" id="v4e-Zn-jBs"/>
+                        <outlet property="searchResultsDataSource" destination="MuB-MO-GR3" id="eRw-Qt-sNz"/>
+                        <outlet property="searchResultsDelegate" destination="MuB-MO-GR3" id="4Tu-xP-NEm"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="585.49618320610682" y="289.43661971830988"/>
+            <point key="canvasLocation" x="584.05797101449275" y="289.4021739130435"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

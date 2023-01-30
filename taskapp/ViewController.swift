@@ -9,9 +9,11 @@ import UIKit
 import RealmSwift
 import UserNotifications    
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
 
     @IBOutlet weak var tableView: UITableView!
+    // searchBar関連で新しく追加したコード
+    @IBOutlet weak var searchField: UISearchBar!
     
     // Realmインスタンスを取得する
     let realm = try! Realm()
@@ -27,6 +29,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.fillerRowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
+        searchField.delegate = self
+    }
+    
+    // searchBar関連で新しく追加したコード
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+        if let word = searchBar.text {
+            print(word)
+        }
     }
     
     // segue で画面遷移する時に呼ばれる
