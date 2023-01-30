@@ -73,29 +73,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="eLb-Jf-3Tv" id="EC8-4W-WcJ"/>
+                        <outlet property="searchField" destination="DEB-fF-kNR" id="e8H-x9-O60"/>
                         <outlet property="tableView" destination="HLE-KG-dt2" id="OjQ-eB-Y9W"/>
                         <segue destination="MuB-MO-GR3" kind="show" identifier="cellSegue" id="RGj-Pt-7VF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="C08-ZH-ANp">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="fGY-32-yaT"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="z4h-RZ-3lT"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="eqS-Go-1qK"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="SWy-MG-0zd"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="eLb-Jf-3Tv">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="cRF-k4-fiK"/>
-                        <outlet property="searchBar" destination="DEB-fF-kNR" id="Uhy-G1-eS6"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="dw8-1J-126"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="2aw-D6-PFJ"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="4pw-cL-FZG"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
         </scene>
@@ -159,8 +142,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1q-JE-zCg">
-                                <rect key="frame" x="10" y="202" width="394" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1q-JE-zCg">
+                                <rect key="frame" x="10" y="204" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -199,25 +182,16 @@
                         <outlet property="categoryTextField" destination="pE5-qi-R8g" id="zaM-Hx-KEc"/>
                         <outlet property="contentsTextView" destination="dbg-1e-9AV" id="305-yE-dAb"/>
                         <outlet property="datePicker" destination="xRx-PZ-cZv" id="zwi-up-yFr"/>
-                        <outlet property="searchDisplayController" destination="Ezt-S5-dW1" id="u6q-bw-5ux"/>
                         <outlet property="titleTextField" destination="vh2-VV-z1p" id="0S8-k1-w8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c51-GP-426" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Ezt-S5-dW1">
-                    <connections>
-                        <outlet property="delegate" destination="MuB-MO-GR3" id="Sqn-0T-tJx"/>
-                        <outlet property="searchContentsController" destination="MuB-MO-GR3" id="v4e-Zn-jBs"/>
-                        <outlet property="searchResultsDataSource" destination="MuB-MO-GR3" id="eRw-Qt-sNz"/>
-                        <outlet property="searchResultsDelegate" destination="MuB-MO-GR3" id="4Tu-xP-NEm"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="584.05797101449275" y="289.4021739130435"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RGj-Pt-7VF"/>
+        <segue reference="wIu-l0-DXF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
