@@ -31,13 +31,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         searchField.delegate = self
     }
     
-    // searchBar関連で新しく追加したコード
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //キーボードをしまう。
         searchField.endEditing(true)
         // NSPredicateクラスを使用したクエリ
         let predicate = NSPredicate(format: "category = %@", searchBar.text!)
         taskArray = realm.objects(Task.self).filter(predicate)
+        // 「SearchBar」に何も文字が入っていないとき、「全てのタスク」が表示
+        if searchBar.text!.isEmpty {
+            taskArray = realm.objects(Task.self)
+        }
         //テーブルを再読み込みする。
         tableView.reloadData()
     }
