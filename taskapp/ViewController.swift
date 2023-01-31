@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     // searchBar関連で新しく追加したコード
     @IBOutlet weak var searchField: UISearchBar!
-    
     // Realmインスタンスを取得する
     let realm = try! Realm()
 
@@ -34,10 +33,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // searchBar関連で新しく追加したコード
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        view.endEditing(true)
-        if let word = searchBar.text {
-            print(word)
-        }
+        //キーボードをしまう。
+        searchField.endEditing(true)
+        // NSPredicateクラスを使用したクエリ
+        let predicate = NSPredicate(format: "category = %@", searchBar.text!)
+        taskArray = realm.objects(Task.self).filter(predicate)
+        //テーブルを再読み込みする。
+        tableView.reloadData()
     }
     
     // segue で画面遷移する時に呼ばれる
